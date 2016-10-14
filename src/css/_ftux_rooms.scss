@@ -1,0 +1,76 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// ADD ROOMS
+
+.addroom-header {
+  color: white;
+  margin: calc-em(30px) auto calc-em(25px);
+  text-align:center;
+}
+
+.addroom-subtitle {
+  @extend .font-size-medium;
+  color: $color-white;
+  width: calc-em(300px);
+  text-align:center;
+}
+
+.room-title {
+  @extend .font-size-large;
+  font-weight: 700;
+  text-align: center;
+  color: $color-white;
+}
+
+.room-description {
+  @extend .font-size-small;
+  opacity: 0.8;
+  color: $color-white;
+  text-align: center;
+}
+
+.card {
+  background-color: #fff;
+  height: calc-em(280px);
+  width: calc-em(280px);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  margin: calc-em(10px) 0 0 0;
+}
+
+.card-image {
+  height: calc-em(280px);
+  width: calc-em(280px);
+  border-radius: 8px;
+}
+
+.button-container{
+  margin: calc-em(10px) 0 0 0;
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  div{
+    @extend .button;
+    margin: 8px;
+    padding: 10px;
+    width: calc-em(130px);
+    background-color:white;
+    text-align:center;
+    border-radius: 10px;
+    color:$color-brand;
+    font-size: 16px;
+    font-weight:bold;
+  }
+  .yes{
+    flex-shrink:0;
+  }
+  .no{
+    flex-shrink:0;
+    opacity: 0.7;
+  }
+}
+
+.addroom-footer {
+  @extend .font-size-small;
+  color: $color-white;
+  margin: calc-em(40px) 0 0 0;
+}

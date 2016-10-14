@@ -1,0 +1,44 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// DONE
+
+.done-uparrow {
+  position: absolute;
+  background: url('./assets/uparrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  width: calc-em(44px);
+  height: calc-em(72px);
+  left: calc-em(15px);
+  top: calc-em(10px);
+}
+
+.done-action {
+  @extend .font-size-small;
+  padding: calc-em(60px) 0 0 0;
+  text-align: center;
+  color: $color-white;
+}
+
+.done-container {
+  @extend .flex-center;
+  color: white;
+  position: relative;
+  text-align: center;
+  height: 100%;
+  & > div {
+    transform: translateY(calc-em(-100px));
+  }
+}
+
+.done-header {
+  @extend .font-size-huge;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.done-text {
+  @extend .font-size-default;
+  margin: calc-em(20px) auto 0;
+  width: calc-em(280px);
+}

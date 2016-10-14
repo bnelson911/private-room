@@ -1,0 +1,210 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// SETTINGS LIST
+
+.header{
+  @extend .font-size-medium;
+  width: 100%;
+  text-align:center;
+  margin:8px;
+  padding:5px;
+}
+.main-settings{
+  width: 100%;
+  height: 100%;
+  @extend .flex-column;
+}
+
+.settings-group {
+  padding-bottom: 5vh;
+  border-bottom: 1px solid $color-grey2;
+  margin: 0 auto;
+  max-width: calc-em(600px);
+  width: 100%;
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.settings-group-header {
+  p {
+    @extend .font-size-small;
+    text-transform: uppercase;
+    color: $color-grey4;
+    margin: 3vh calc-em(20px) 3vh;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// SETTINGS ITEM
+
+.settings-item {
+  @extend .flex-row;
+  padding: calc-em(18px) calc-em(20px);
+}
+
+.settings-item-left {
+  flex: 1 1 auto;
+  p span {
+    display: inline-block;
+  }
+}
+
+.settings-item-right {
+  @extend .flex-center;
+  width: calc-em(70px);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// GROUP SETTINGS
+
+.settings-item {
+  cursor: pointer;
+  flex: 1 0 auto;
+  &.selected{
+    border-radius:20px;
+    background-color:$color-brand;
+    color:white;
+  }
+  .wall-img {
+    width: calc-em(30px);
+    height: calc-em(30px);
+    background-image: url('https://a.imgdropt-dev.com/image/d3568e20-54fd-44b2-be1b-12e7edfac488');
+    background-size: calc-em(30px) calc-em(30px);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .chat-img {
+    width: calc-em(30px);
+    height: calc-em(30px);
+    background-image: url('https://a.imgdropt-dev.com/image/7c92cd02-f023-4e59-ac3d-23ccd36f8fd7');
+    background-size: calc-em(30px) calc-em(30px);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .video-img {
+    width: calc-em(30px);
+    height: calc-em(30px);
+    background-image: url('https://a.imgdropt.com/image/f185c568-786c-43b3-ad40-8af8555a14ab');
+    background-size: calc-em(30px) calc-em(30px);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.group-image {
+  width:  calc-em(40px);
+  height: calc-em(40px);
+  border-radius: 8px;
+  border: 1px solid $color-grey3;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.group-image-input-container {
+  width: calc-em(50px);
+  height: calc-em(50px);
+  background-image: url(./assets/img/add-photo.png);
+  background-repeat: no-repeat;
+  background-size: calc-em(14px) calc-em(13px);
+  background-position: right bottom;
+  position: absolute;
+  left: calc-em(-7px);
+  top: calc-em(-7px);
+  input {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// ROOM SETTINGS
+
+.settings-room-fallback {
+
+}
+
+.room-icon {
+  width: calc-em(35px);
+  height: calc-em(35px);
+  border-radius:100%;
+  background-size: cover;
+  background-position: center center;
+  margin-right: calc-em(6px);
+  vertical-align: middle;
+  position: relative;
+  top: calc-em(-2px);
+}
+
+.room-checkbox-container {
+  input[type="checkbox"] {
+    display: none;
+  }
+  label {
+    padding: calc-em(11px) calc-em(9px);
+    border-radius: 7px;
+    display: inline-block;
+    position: relative;
+    background: lighten($color-brand, 40);
+    width: calc-em(73px);
+    height: calc-em(34px);
+    border:1px solid $color-grey2;
+    box-shadow: inset 0 0 20px rgba(0,0,0,.1),0 0 4px rgba(254,18,99,0.1);
+    &:before {
+      content: ' ';
+      position: absolute;
+      background: $color-white;
+      top: 0;
+      z-index: 999;
+      left: 0;
+      width: calc-em(24px);
+      color: $color-white;
+      height: calc-em(32px);
+      border-radius: 7px;
+      box-shadow: 0 0 1px rgba(0,0,0,0.6);
+      transition: all .1s ease-in;
+    }
+    &:after {
+      @extend .font-size-small;
+      left: calc-em(27px);
+      content: 'Off';
+      position: absolute;
+      color: $color-white;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: calc-em(5px);
+      top: calc-em(4px);
+      border-radius: calc-em(100px);
+      transition: all .1s ease-in;
+    }
+    &.checked {
+      background-color: $color-brand;
+      box-shadow: inset 0 0 20px rgba(0,0,0,.1),0 0 4px rgba(254,18,99,0.1);
+      &:before {
+        left: calc-em(49px);
+      }
+      &:after {
+        content: 'On';
+        left: calc-em(8px);
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.create-button{
+    padding: 10px;
+    text-align:center;
+    background-color:$color-brand;
+    color:white;
+    position: absolute;
+    font-size:1.5em;
+    bottom:0px;
+    width: 100%;
+    z-index:1000;
+
+}

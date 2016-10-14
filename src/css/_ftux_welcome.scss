@@ -1,0 +1,38 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// WELCOME
+
+.middle-container{
+    height:100%;
+    background-color:#ff5050;
+    @extend .flex-center;
+  }
+
+.welcome {
+  color: #fff;
+  transform: translateY(calc-em(-50px));
+  h1 {
+    text-align: center;
+    position: relative;
+    left: calc-em(20px);
+  }
+  .hand{
+    position: absolute;
+    left: calc-em(-10px);
+    top: calc-em(0px);
+    width: calc-em(40px);
+    height:calc-em(44px);
+    background:url("assets/emoji_hand.png");
+    background-size: auto 100%;
+  }
+  .tagline{
+    @extend .font-size-medium;
+    color:#fff;
+    text-align:center;
+    margin-top: calc-em(5px);
+  }
+}
+
+.lets-go {
+  position: relative;
+  top: -100px;
+}

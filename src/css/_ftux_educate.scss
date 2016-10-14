@@ -1,0 +1,54 @@
+.educate-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow:hidden;
+  background-color: #ff5050;
+
+  &--step {
+    top: 20px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: opacity 1500ms;
+  }
+
+  &--title {
+    position: absolute;
+    @extend .font-size-large;
+    color:#fff;
+    line-height: normal;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    top: 120px;
+  }
+
+  &--nextbutton {
+    @extend .font-size-medium;
+    position: absolute;
+    background-color:#f00;
+    bottom:0px;
+    width: 100%;
+  }
+}
+
+.educate-container--uparrow {
+  height: 100px;
+  width: 80px;
+  background-size: 80% auto;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  margin-left: 10px;
+  animation-name: uparrow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes uparrow {
+  0%   {transform: translate(0,0)}
+  100%  {transform: translate(0, 10px)}
+}

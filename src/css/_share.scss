@@ -1,0 +1,160 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// SHARE
+
+.share {
+  .settings-group {
+    @extend .flex-column;
+  }
+ header {
+  position: relative;
+  p {
+    @extend .font-size-default;
+    margin: calc-em(28px);
+    text-align: center;
+    text-transform: uppercase;
+  }
+ }
+}
+
+.back-btn {
+  position:absolute;
+  margin: calc-em(15px) 0 0 calc-em(15px);
+  width: calc-em(44px);
+  height: calc-em(44px);
+  background-image: url(./assets/img/backBtn.png);
+  background-size: calc-em(16px);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.invite-button-list {
+  @extend .flex-grid;
+  li {
+    @extend .flex-center;
+    @include aspect-ratio(1, 0.9);
+    width: 50%;
+    &:nth-of-type(even) span {
+      transform: translateX(-10px);
+    }
+    &:nth-of-type(odd) span {
+      transform: translateX(10px);
+    }
+  }
+}
+
+.share-button {
+  width: calc-em(120px);
+  height: calc-em(120px);
+  background: $color-grey1;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: calc-em(48px);
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// ACCESS CODE
+
+.share-code {
+  font-size: calc-em(30px);
+  color: $color-black;
+  text-align: center;
+  font-weight: bold;
+  margin: 0 auto calc-em(15px);
+  -webkit-user-select: all;
+}
+
+.share-link {
+  text-align: center;
+  -webkit-user-select: all;
+  width: 100%;
+}
+
+.copy-share {
+  display: inline-block;
+  margin-bottom: calc-em(-3px);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(./assets/img/copy.png); /* Allow copying by icon 54 from the Noun Project */
+}
+
+.copy-share-code {
+  width: calc-em(32px);
+  height: calc-em(32px);
+  background-size: calc-em(32px);
+}
+
+.copy-share-link {
+  width: calc-em(18px);
+  height: calc-em(18px);
+  background-size: calc-em(18px);
+}
+
+.share-code-text {
+  max-width: calc-em(320px);
+  width: 95vw;
+  margin: 0 auto;
+  padding: calc-em(15px) 0;
+  text-align: center;
+  color: $color-grey3;
+}
+
+.copy-to-clipboard-button {
+  height: calc-em(44px);
+  background: $color-brand;
+  color: $color-white;
+  display: inline;
+  margin: calc-em(10px) auto 0;
+  border-radius: 8px;
+  width: calc-em(200px);
+  text-align: center;
+  padding: calc-em(12px) calc-em(16px);
+  transition: all 400ms ease-in-out;
+  &:after {
+    content: "copy to clipboard";
+  }
+  &.true {
+    background: $color-grey6;
+   &:after {
+    content: "copied to clipboard";
+  }
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// SOCIAL STYLES
+
+.sms {
+  background-color: rgb(7,130,255);
+  background-image: url(./assets/img/sms.png);
+}
+
+.whatsapp {
+  background-color: rgb(37,211,102);
+  background-image: url(./assets/img/whatsapp.png);
+}
+
+.tweet {
+  background-color: rgb(29,161,243);
+  background-image: url(./assets/img/twitter.png);
+}
+
+.facebook {
+  background-color: rgb(59,89,153);
+  background-image: url(./assets/img/facebook.png);
+}
+
+.line {
+  background-color: rgb(0,195,0);
+  background-image: url(./assets/img/line.png);
+}
+
+.messenger {
+  background-color: rgb(0,132,255);
+  background-image: url(./assets/img/messenger.png);
+}
+
+.wechat {
+  background-color: rgb(9,184,62);
+  background-image: url(./assets/img/wechat.png);
+}

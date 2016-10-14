@@ -1,0 +1,75 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// FTUX
+
+.ftux {
+  @extend .flex-column;
+  background-image: url(./assets/ftux/ftux-bg.png);
+  background-size: calc-em(420px);
+  height: 100%;
+  h1 {
+    margin: 4vh auto;
+    font-size: calc-em(24px);
+    text-align: center;
+    width: 95vw;
+    max-width: calc-em(300px);
+    font-weight: 700;
+    color: $color-brand;
+    word-break: keep-all;
+    -moz-hyphens:none;
+    -ms-hyphens:none;
+    -webkit-hyphens: none;
+    hyphens:none;
+  }
+}
+
+.ftux-image {
+  width: 95vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  flex: 1 1 auto;
+  margin: 0 auto;
+  &.one {
+    background-image: url(./assets/ftux/ftux-1.png);
+  }
+  &.two {
+    background-image: url(./assets/ftux/ftux-2.png);
+  }
+  &.three {
+    background-image: url(./assets/ftux/ftux-3.png);
+  }
+  &.four {
+    background-image: url(./assets/ftux/ftux-4.png);
+  }
+}
+
+.next-button {
+  @extend .flex-center;
+  @extend .font-size-medium;
+  height: calc-em(50px);
+  background-color: $color-brand;
+  color: $color-white;
+  font-weight: 700;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// FTUX DONE SCREEN
+
+.done-action {
+  @extend .font-size-small;
+  padding: calc-em(60px) 0 0 0;
+  text-align: center;
+  color: $color-white;
+}
+
+.done-uparrow {
+  position: absolute;
+  background: url('./assets/ftux/uparrow.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  width: calc-em(56px);
+  height: calc-em(76px);
+  left: calc-em(15px);
+  top: calc-em(10px);
+}

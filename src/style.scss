@@ -1,0 +1,47 @@
+//////////////////////////////////////////////////////////////////////////////////////////
+// IMPORTS
+
+@import "./css/bebo-style/mixins";
+@import "./css/bebo-style/reset";
+@import "./css/bebo-style/layout";
+@import "./css/bebo-style/colors";
+@import "./css/bebo-style/typography";
+
+@import "./css/settings";
+@import "./css/share";
+@import "./css/web_connect";
+@import "./css/modal";
+@import "./css/ftux";
+
+//////////////////////////////////////////////////////////////////////////////////////////
+// ROOM STYLES
+
+
+.app-layer{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow:hidden;
+}
+
+.button{
+  @extend .flex-center;
+  background-color: $color-white;
+  height: calc-em(50px);
+  text-align:center;
+  border-radius: 8px;
+  width: calc-em(280px);
+  margin: 0 auto;
+}
+
+.main-container{
+  background: $color-white;
+  color: $color-black;
+  background-size:cover;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+  width: 100vw;
+  height: 100%;
+}
