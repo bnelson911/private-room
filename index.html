@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        (function (_b, e, b, o) {
+            _b.Bebo = {
+                b: []
+                , onReady: function (cb) {
+                    this.b.push(cb)
+                }
+            }
+            var s = e.createElement(b);
+            s.type = 'text/javascript';
+            s.async = 1;
+            s.src = o;
+            var x = e.getElementsByTagName(b)[0];
+            x.parentNode.insertBefore(s, x);
+        })
+        (window, document, 'script', 'https://widgets.bebo.com/bebo.min.js');
+    </script>
+    <script>
+        Bebo.onReady(function () {
+            // Bebo is initialized
+        });
+    </script>
+</body>
+
+</html>
